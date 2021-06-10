@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+:root {
+  --modal-duration: 1s;
+  --primary-color: #30336b;
+  --secondary-color: #be2edd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  transition: transform 0.3s ease;  /* adds a smooth effect to the toggle */
+}
+
+body.show-nav {
+  /* Width of nav */
+  transform: translateX(200px);   /* 200px b/c the width of our nav is 200px */
+}
+
+nav {
+  background-color: var(--primary-color);
+  border-right: 2px solid rgba(200, 200, 200, 0.1);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;    /* takes up the entire height of the screen */
+  z-index: 100;     /* a high number like 100 always makes sure its on top */
+  transform: translateX(-100%);   /* takes it completely off the screen to begin w/ and X is the x-axis */
+}
+
+nav .logo {
+  padding: 30px 0;
+  text-align: center;
+}
+
+nav .logo img {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;   /* made the image round */
+}
+
+nav ul {
+  padding: 0;
+  list-style-type: none;  /* remove bullet points */
+  margin: 0;
+}
+
+nav ul li {
+  border-bottom: 2px solid rgba(200, 200, 200, 0.1);
+  padding: 20px;
+}
+
+/* sudo selector to grab the first li and add a border to the top */
+nav ul li:first-of-type {
+  border-top: 2px solid rgba(200, 200, 200, 0.1);
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;  /* remove the underline that were under the links by default */
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 130%;
+  position: relative;   /* for the toggle button */
+  padding: 40px 15px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header p {
+  margin: 30px 0;
+}
+
+/* all buttons and the submit button on the form */
+button,
+input[type='submit'] {
+  background-color: var(--secondary-color);
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+button:focus {
+  outline: none;
+}
+
+.toggle {
+  background-color: rgba(0, 0, 0, 0.3);   /* 0.3 transparency */
+  position: absolute;     /* can do this b/c of position relative in the header */
+  top: 20px;    /* 20 from the top */
+  left: 20px;   /* 20 from the left */
+}
+
+.cta-btn {
+  padding: 12px 30px;
+  font-size: 20px;
+}
+
+.container {
+  padding: 15px;
+  margin: 0 auto;
+  max-width: 100%;    /* of its container */
+  width: 800px;     /* if we stretch it */
+}
+
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.6);   /* this is the background that appears behind the modal */
+  display: none;    /* hide initially */
+  position: fixed;  /* make it cover entire page */
+  top: 0;           /* make it cover entire page */
+  left: 0;          /* make it cover entire page */
+  right: 0;         /* make it cover entire page */
+  bottom: 0;        /* make it cover entire page */
+}
+
+.modal-container.show-modal {
+  display: block;
+}
+
+/* the box in the middle */
+.modal {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  overflow: hidden;   /* no scroll bars or anything  */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);   /* puts it right in the middle */
+  max-width: 100%;      /* ????? */
+  width: 400px;
+  /* these two adds the fade in effect to the modal instead of it popping up super quick */
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);  /* time it takes to appear */
+}
+
+.modal-header {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 15px;
+}
+
+.modal-header h3 {
+  margin: 0;    /* the h3's margin was making the header too big */
+  border-bottom: 1px solid #333;
+}
+
+.modal-content {
+  padding: 20px;
+}
+
+.modal-form div {
+  margin: 15px 0;   /* seperate all the divs in the form */
+}
+
+.modal-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.modal-form .form-input {
+  padding: 8px;
+  width: 100%;
+}
+
+.close-btn {
+  background: transparent;
+  font-size: 25px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@keyframes modalopen {
+  /* when it starts */
+  from {
+    opacity: 0;   /* from invisible */
+  }
+
+  /* when it ends */
+  to {
+    opacity: 1;   /* to visible in 1 second */
+  }
+}
