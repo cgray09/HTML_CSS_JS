@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Progress Steps</title>
+    <link rel="icon" href="https://img.freepik.com/free-photo/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall_1258-28312.jpg" />
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="progress-container">
+        <div class="progress" id="progress"></div>
+        <div class="circle active">1</div>
+        <div class="circle">2</div>
+        <div class="circle">3</div>
+        <div class="circle">4</div>
+      </div>
+
+      <button class="btn" id="prev" disabled>Prev</button>
+      <button class="btn" id="next">Next</button>
+
+      <!-- <div style="margin-top: 10px;">   -->
+        <div class="navtag footer">
+            <span class="m span-style">Website Maker: Christian V. Grayson</span>
+            <span class="m">Terms of Service</span>
+            <span class="m">Privacy</span>
+        </div>
+      <!-- </div> -->
+    </div>
+    
+    <script src="script.js"></script>
+  </body>
+  <style>
+    .navtag {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: fixed;
+      bottom: 0;
+      margin: 0 0 30px 50px;
+    }
+    .m {
+      color: white;
+      font-size: 15px;
+    }
+    </style>
+</html>
