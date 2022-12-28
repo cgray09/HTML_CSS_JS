@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Form Input Wave</title>
+    <link rel="icon" href="https://img.freepik.com/free-photo/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall_1258-28312.jpg" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Please Login</h1>
+      <form>
+        <div class="form-control">
+          <input type="text" required>
+          <label>Email</label>
+          <!-- <label>
+            <span style="transition-delay: 0ms">E</span>
+              <span style="transition-delay: 50ms">m</span>
+              <span style="transition-delay: 100ms">a</span>
+              <span style="transition-delay: 150ms">i</span>
+              <span style="transition-delay: 200ms">l</span>
+        </label> -->
+        </div>
+
+        <div class="form-control">
+          <input type="password" required>
+          <label>Password</label>
+        </div>
+
+        <button class="btn">Login</button>
+
+        <p class="text">Don't have an account? <a href="#">Register</a> </p>
+      </form>
+    </div>
+    <div class="navtag footer">
+      <span class="m span-style">Website Maker: Christian V. Grayson</span>
+      <span class="m">Terms of Service</span>
+      <span class="m">Privacy</span>
+  </div>
+    <script src="script.js"></script>
+  </body>
+  <style>
+    .navtag {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      margin: 20px 0;
+    }
+    .m {
+      color: white;
+      font-size: 15px;
+    }
+    </style>
+</html>
