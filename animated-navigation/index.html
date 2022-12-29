@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Animated Navigation</title>
+    <link rel="icon" href="https://img.freepik.com/free-photo/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall_1258-28312.jpg" />
+  </head>
+  <body>
+    <nav class="active" id="nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Works</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <button class="icon" id="toggle">
+        <div class="line line1"></div>
+        <div class="line line2"></div>
+      </button>
+    </nav>
+    <div class="navtag footer">
+      <span class="m span-style">Website Maker: Christian V. Grayson</span>
+      <span class="m">Terms of Service</span>
+      <span class="m">Privacy</span>
+  </div>
+    <script src="script.js"></script>
+
+    <!-- Dribbble link: https://dribbble.com/shots/2427219-Header-Navigation-Day-053-dailyui -->
+  </body>
+  <style>
+    .navtag {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      margin: 0 0 30px 0;
+    }
+    .m {
+      color: white;
+      font-size: 15px;
+    }
+    </style>
+</html>
