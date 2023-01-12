@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Auto Text Effect</title>
+    <link rel="icon" href="https://img.freepik.com/free-photo/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall_1258-28312.jpg" />
+  </head>
+  <body>
+    <h1 id="text">Starting...</h1>
+
+    <div class="space">
+      <label for="speed">Speed:</label>
+      <input type="number" name="speed" id="speed" value="1" min="1" max="10" step="1">
+    </div>
+
+    <div class="navtag footer">
+      <span class="m span-style">Website Maker: Christian V. Grayson</span>
+      <span class="m">Terms of Service</span>
+      <span class="m">Privacy</span>
+  </div>
+
+    <script src="script.js"></script>
+  </body>
+  <style>
+    .navtag {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      /* position: fixed;
+      bottom: 0; */
+      background-color: darksalmon;
+    }
+    .m {
+      color: black;
+      font-size: 15px;
+    }
+    .space {
+      margin: 0 0 100px 0;
+    }
+    </style>
+</html>
