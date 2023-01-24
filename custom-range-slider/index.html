@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Custom Range Slider</title>
+    <link rel="icon" href="https://img.freepik.com/free-photo/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall_1258-28312.jpg" />
+  </head>
+  <body>
+    <h2>Custom Range Slider</h2>
+    <div class="range-container">
+      <input type="range" id="range" min="0" max="100">
+      <label for="range">50</label>
+    </div>
+    <div class="navtag footer">
+      <span class="m span-style">Website Maker: Christian V. Grayson</span>
+      <span class="m">Terms of Service</span>
+      <span class="m">Privacy</span>
+  </div>
+
+    <script src="script.js"></script>
+  </body>
+  <style>
+    .navtag {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      margin: 0 0 30px 0;
+    }
+    .m {
+      color: black;
+      font-size: 15px;
+    }
+    </style>
+</html>
